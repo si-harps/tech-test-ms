@@ -1,0 +1,21 @@
+.card {
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.asset {
+  display: inline-block;
+}
+
+.row {
+  display: block;
+  clear: both;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: red;
+}
