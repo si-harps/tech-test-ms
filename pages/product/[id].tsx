@@ -58,6 +58,7 @@ const ProductPage: React.FC<ProductProps> = () => {
       badges={available_badges}
       offers={offers}
       offerIds={offer_ids}
+      mockedOfferIds={["1", "3", "2", "4"]}
     />
 
   </div>

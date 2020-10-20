@@ -1,6 +1,10 @@
 # Simon Harper - M&S Tech Test
 
-This directory contains the technical test submission for "Senior Software Engineer" position with M&S  
+This directory contains the technical test submission for "Senior Software Engineer" position with M&S.
+
+### Time taken
+
+2 Hours 15 mins
 
 ### How to run this application
 
@@ -26,4 +30,4 @@ To run a pre-build containerized version of the application, simply run...
 
 I have bundled 2 screenshots to highlight an issue with ```offer_ids``` using the "product" GQL query. When selecting a product by it's ```id```, ```offer_ids``` is always a null value.
 
-For the purposes of this test I have mocked ```offer_ids``` as hardcoded values within the ```Detail.tsx``` component and added the expected behaviour outlined in the test requirements.
+For the purposes of this test I have mocked ```offer_ids``` as hardcoded values within the ```product/[id].tsx``` component and added the expected behaviour outlined in the test requirements.
