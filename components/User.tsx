@@ -37,9 +37,11 @@ const User: React.FC<Props> = ({ id, badges, offers, offerIds, mockedOfferIds })
   }
 
   return <div className={styles.user}>
+    ---- Issue with QGL DB Image
     { [...new Set(renderedBadges)].map( (type, i) => <span key={i} className="">
       <img src={`/${type}_icon.jpg`} /> 
     </span>)}
+    NO OFFER_IDS RETURNED FROM product(id) QUERY ---------
   </div>
 }
 
