@@ -1,37 +1,39 @@
-import { useRouter } from "next/router";
-import { RouteComponentProps } from '@reach/router';
 import styles from "./User.module.css";
-import { useQuery } from "@apollo/client";
-import { GET_USER } from "../gql";
 
-interface UserProps extends RouteComponentProps {
+interface Offer {
+  id: string,
+  title: string,
+  type: string
+}
+
+interface Props {
+  id: string;
+  badges: string;
+  offers?: Offer[];
   offerIds?: Array<string>;
 }
 
-// interface Props {
-//   offerIds?: Array<string>;
-// }
+const User: React.FC<Props> = ({ id, badges, offers, offerIds }) => {
 
-const User: React.FC<UserProps> = ({ offerIds }) => {
-
-  const router = useRouter();
-
-  const {
-    data, 
-    loading, 
-    error 
-  } = useQuery(GET_USER, {
-    variables: { id: router.query.user }
-  });
-
-  if (loading) return <span>Loading...</span>;
-  if (error) return <span>{`Error...! ${error}`}</span>;
+  console.log(id, badges, offers, offerIds);
 
   return <div>
-    <pre>{JSON.stringify(data.user, null, 2)}</pre>
-    <img src={`/gonesoon_icon.jpg`} />
+    <ul>
+      <li>{ id }</li>
+      <li>Badges:</li>
+      <ul>
+        { !!badges.length && badges.split('||').map( (badge, i) => <li key={i}>{ badge }</li> )}
+      </ul>
+      <li>Offers:</li>
+      <ul>
+        { !!offers.length && offers.map( offer => <li key={offer.id}>{`${offer.id}: ${offer.title}`}</li> )}
+      </ul>
+    </ul>
+
+    {/* <img src={`/gonesoon_icon.jpg`} />
     <img src={`/loyalty_icon.jpg`} />
-    <img src={`/sale_icon.jpg`} />
+    <img src={`/sale_icon.jpg`} /> */}
+
   </div>
 }
 

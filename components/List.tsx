@@ -20,16 +20,15 @@ interface Props {
 const List: React.FC<Props> = ({ products }) => {
 
   return <div className={styles.grid}>
-    { products.map( (product, i) => {
-      return <Card
-        key={+product.id}
-        id={+product.id}
+    { products.map( (product, i) => <Card
+        key={product.id}
+        id={product.id}
         name={product.name}
         image={product.image_key}
         currentPrice={product.price.current_price}
         originalPrice={product.price.original_price}
       />
-    })}
+    )}
   </div>
 }
 

@@ -12,7 +12,7 @@ const IndexPage: React.FC = () => {
   } = useQuery(GET_PRODUCT_LIST);
 
   if (loading) return <span>Loading...</span>;
-  if (error) return <span>{`Error...! ${error}`}</span>;
+  if (error) return <span>{`${error}`}</span>;
 
   return <List products={data.productList} />;
 }

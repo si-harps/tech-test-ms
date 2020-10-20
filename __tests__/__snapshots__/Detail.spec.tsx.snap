@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Detail matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h3>
+      Shirt
+    </h3>
+    <img
+      src="https://asset1.cxnmarksandspencer.com/is/image/mands/undefined"
+    />
+    <span>
+      £10.00
+    </span>
+    <span
+      class=""
+    >
+      Original Price: £15.00
+    </span>
+    <p>
+      Lorem ipsum
+    </p>
+  </div>
+</DocumentFragment>
+`;
